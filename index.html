@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi StoryMap con Leyenda Dinámica</title>
+    <link rel="stylesheet" href="lib/leaflet.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="container">
+        <div id="map-container">
+            <div id="resetButton">Reiniciar Mapa</div>
+            <div id="map"></div>
+            <div id="backToIndexButton">Volver al Índice</div>
+            <div id="legend">
+                <button id="toggle-legend">Minimizar</button> <!-- Botón para minimizar la leyenda -->
+                <div id="legend-content">
+                    <!-- Aquí se generará el contenido de la leyenda dinámicamente -->
+                </div>
+            </div>
+
+            <!-- Panel de Atributos con encabezado -->
+            <div id="attributes-panel" class="panel minimized">
+                <div class="panel-header">
+                    <span>Atributos de la Capa</span>
+                    <button id="toggle-attributes">Despliegue de atributos</button>
+                </div>
+                <div id="attributes-content">
+                    <!-- La tabla de atributos se generará dinámicamente aquí -->
+                </div>
+            </div>
+
+        </div>    
+    </div>
+    <script src="lib/leaflet.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

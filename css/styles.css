@@ -1,0 +1,232 @@
+/* Estilo general */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+
+figure {
+    text-align: center; /* Centrar la imagen y el título */
+    margin: 20px 0; /* Añadir margen superior e inferior */
+}
+
+figcaption {
+    font-size: 14px; /* Tamaño de fuente del título */
+    color: #555; /* Color del texto */
+    margin-top: 5px; /* Margen superior para separar del borde de la imagen */
+}
+
+#map-container {
+    flex: 1; /* 100% para el contenedor del mapa */
+    position: relative;
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#legend {
+    position: absolute;
+    top: 130px;
+    right: 10px;
+    z-index: 1000;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-height: 70vh;
+    overflow-y: auto;
+    width: 250px;
+}
+
+#legend.minimized #legend-content { /* Ocultar contenido al minimizar */
+    display: none;
+}
+
+#toggle-legend {
+    margin-bottom: 10px;
+    background-color: #5C4E95;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Estilos para el panel de atributos similar al de la leyenda */
+#attributes-panel {
+    position: absolute;
+    bottom: 130px;
+    right: 10px;
+    z-index: 1000;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    max-height: 50vh;
+    overflow-y: auto;
+    width: 450px;
+}
+
+#attributes-panel.minimized #attributes-content { /* Ocultar contenido al minimizar */
+    display: none;
+}
+
+#toggle-attributes {
+    margin-bottom: 10px;
+    background-color: #5C4E95;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Estilos para las pestañas */
+.tab {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: #ddd;
+    border-radius: 3px;
+}
+
+.tab.active {
+    background-color: #5C4E95;
+    color: white;
+}
+
+/* Estilos para la tabla de atributos */
+#attributes-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#attributes-content th, #attributes-content td {
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: left;
+    font-size: 12px;
+}
+
+#attributes-content th {
+    background-color: #5C4E95;
+    color: white;
+}
+
+#attributes-content td {
+    background-color: #f9f9f9;
+}
+
+/* Efecto de minimizar para el panel de atributos */
+#attributes-panel.minimized #attributes-content {
+    display: none;
+}
+
+#attributes-panel .panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Estilo para el botón de minimizar del panel de atributos */
+#toggle-attributes {
+    background-color: #5C4E95;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Estilos para las pestañas en el panel de atributos */
+.tab {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: #ddd;
+    border-radius: 3px;
+}
+
+.tab.active {
+    background-color: #5C4E95;
+    color: white;
+}
+
+
+
+.tab-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.tab-button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    background-color: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+.tab-button.active {
+    background-color: #5C4E95;
+    color: white;
+}
+
+.attributes-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.attributes-table th, .attributes-table td {
+    padding: 5px;
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 12px;
+}
+
+.attributes-table th {
+    background-color: #5C4E95;
+    color: white;
+}
+
+.attributes-table tr.selected {
+    background-color: #00FFFF; /* Color cian claro */
+    font-weight: bold;
+}
+
+#resetButton {
+    position: absolute;
+    bottom: 60px; /* Coloca el botón justo debajo del control de zoom */
+    left: 10px; /* Alinea a la izquierda */
+    z-index: 1000;
+    background-color: #5C4E95;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+#resetButton:hover {
+    background-color: #4A3B7D;
+}
